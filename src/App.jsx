@@ -1,11 +1,11 @@
-function App() {
-  return (
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+function App(){
+  return(
     <main>
-      <h1 style={{ color: 'white', padding: '2rem' }}>
-        Hello Umm e Fatima 👋
-      </h1>
+      <Navbar />
+      <Hero/>
     </main>
   )
 }
-
 export default App
