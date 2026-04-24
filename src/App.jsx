@@ -1,11 +1,15 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-function App(){
-  return(
+import About from './components/About'
+
+function App() {
+  return (
     <main>
       <Navbar />
-      <Hero/>
+      <Hero />
+      <About />
     </main>
   )
 }
+
 export default App
