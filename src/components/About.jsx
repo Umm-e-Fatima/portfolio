@@ -28,7 +28,7 @@ function About() {
             className="relative h-96 md:h-[500px] rounded-xl border border-yellow-500/30 overflow-hidden"
           >
             <img
-              src="/mypic.png"
+              src="/my pic.png"
               alt="Umm e Fatima"
               className="w-full h-full object-cover object-top"
             />
