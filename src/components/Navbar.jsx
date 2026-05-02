@@ -47,7 +47,12 @@ function Navbar() {
       </ul>
 
       {/* Chat Button */}
-      <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg transition-colors duration-200">
+      <button
+        onClick={() => {
+          document.querySelector('.fixed.bottom-6.right-6').click()
+        }}
+        className="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg transition-colors duration-200 font-bold"
+      >
         Chat with AI
       </button>
 

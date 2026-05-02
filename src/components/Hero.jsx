@@ -67,6 +67,9 @@ function Hero() {
           </a>
 
           <button
+            onClick={() => {
+              document.querySelector('.fixed.bottom-6.right-6').click()
+            }}
             className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 font-bold px-8 py-3 rounded-lg transition-all duration-200"
           >
             Chat with My AI
