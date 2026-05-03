@@ -45,7 +45,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="min-h-screen bg-[#0a0a0f] px-6 py-20">
+    <section id="contact" className="min-h-screen bg-[#020c1b] px-6 py-20">
       <div className="max-w-5xl mx-auto">
 
         {/* Title */}
@@ -56,7 +56,7 @@ function Contact() {
           viewport={{ once: true }}
           className="text-5xl md:text-6xl font-bold text-white mb-4 text-center"
         >
-          Get In <span className="text-yellow-400">Touch</span>
+          Get In <span className="text-cyan-400">Touch</span>
         </motion.h2>
 
         {/* Subtitle */}
@@ -95,9 +95,9 @@ function Contact() {
 
               <a
                 href="mailto:fatimaanis809@gmail.com"
-                className="flex items-center gap-4 text-slate-300 hover:text-yellow-400 transition group"
+                className="flex items-center gap-4 text-slate-300 hover:text-cyan-400 transition group"
               >
-                <div className="w-12 h-12 bg-yellow-500/10 border border-yellow-500/30 rounded-lg flex items-center justify-center text-xl">
+                <div className="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-lg flex items-center justify-center text-xl">
                   📧
                 </div>
                 <div>
@@ -110,9 +110,9 @@ function Contact() {
                 href="https://github.com/Umm-e-Fatima"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-slate-300 hover:text-yellow-400 transition group"
+                className="flex items-center gap-4 text-slate-300 hover:text-cyan-400 transition group"
               >
-                <div className="w-12 h-12 bg-yellow-500/10 border border-yellow-500/30 rounded-lg flex items-center justify-center text-xl">
+                <div className="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-lg flex items-center justify-center text-xl">
                   🐙
                 </div>
                 <div>
@@ -125,9 +125,9 @@ function Contact() {
                 href="https://www.linkedin.com/in/umm-e-fatima/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-slate-300 hover:text-yellow-400 transition group"
+                className="flex items-center gap-4 text-slate-300 hover:text-cyan-400 transition group"
               >
-                <div className="w-12 h-12 bg-yellow-500/10 border border-yellow-500/30 rounded-lg flex items-center justify-center text-xl">
+                <div className="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-lg flex items-center justify-center text-xl">
                   💼
                 </div>
                 <div>
@@ -152,12 +152,12 @@ function Contact() {
             viewport={{ once: true }}
           >
             {submitted ? (
-              <div className="text-center bg-yellow-500/10 border border-yellow-500/30 p-10 rounded-xl">
+              <div className="text-center bg-cyan-500/10 border border-cyan-500/30 p-10 rounded-xl">
                 <h3 className="text-white text-2xl font-bold mb-2">Message Sent!</h3>
                 <p className="text-slate-400">I'll get back to you soon.</p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-4 text-yellow-400 border border-yellow-400 px-4 py-2 rounded"
+                  className="mt-4 text-cyan-400 border border-cyan-400 px-4 py-2 rounded"
                 >
                   Send Another
                 </button>
@@ -172,7 +172,7 @@ function Contact() {
                   onChange={handleChange}
                   placeholder="John Doe"
                   required
-                  className="w-full bg-[#111118] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-yellow-500/50 transition-colors duration-200"
+                  className="w-full bg-[#111118] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 transition-colors duration-200"
                 />
                 <input
                   type="email"
@@ -181,7 +181,7 @@ function Contact() {
                   onChange={handleChange}
                   placeholder="john@example.com"
                   required
-                  className="w-full bg-[#111118] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-yellow-500/50 transition-colors duration-200"
+                  className="w-full bg-[#111118] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 transition-colors duration-200"
                 />
 
                 <textarea
@@ -192,13 +192,13 @@ function Contact() {
                   rows={5}
                   required
                   style={{ resize: 'none' }}
-                  className="w-full bg-[#111118] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-yellow-500/50 transition-colors duration-200 resize-none"
+                  className="w-full bg-[#111118] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 transition-colors duration-200 resize-none"
                 />
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-yellow-500 text-black py-3 rounded-lg"
+                  className="bg-cyan-500 text-black py-3 rounded-lg"
                 >
                   {loading ? 'Sending...' : 'Send Message'}
                 </button>

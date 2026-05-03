@@ -129,7 +129,7 @@ function Chatbot() {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-yellow-500 hover:bg-yellow-600 text-black rounded-full shadow-lg shadow-yellow-500/30 flex items-center justify-center text-2xl transition-colors duration-200"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-cyan-500 hover:bg-cyan-600 text-black rounded-full shadow-lg shadow-cyan-500/30 flex items-center justify-center text-2xl transition-colors duration-200"
       >
         {isOpen ? '✕' : '🤖'}
       </motion.button>
@@ -142,13 +142,13 @@ function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-24 right-6 z-50 w-80 md:w-96 h-[500px] bg-[#111118] border border-yellow-500/20 rounded-2xl shadow-2xl shadow-yellow-500/10 flex flex-col overflow-hidden"
+            className="fixed bottom-24 right-6 z-50 w-80 md:w-96 h-[500px] bg-[#111118] border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/10 flex flex-col overflow-hidden"
           >
 
             {/* Header */}
-            <div className="bg-yellow-500/10 border-b border-yellow-500/20 px-4 py-3 flex items-center justify-between">
+            <div className="bg-cyan-500/10 border-b border-cyan-500/20 px-4 py-3 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
+                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
                   AI
                 </div>
                 <div>
@@ -161,7 +161,7 @@ function Chatbot() {
               </div>
               <button
                 onClick={clearChat}
-                className="text-slate-500 hover:text-yellow-400 text-xs transition-colors duration-200"
+                className="text-slate-500 hover:text-cyan-400 text-xs transition-colors duration-200"
               >
                 Clear
               </button>
@@ -180,7 +180,7 @@ function Chatbot() {
                   <div
                     className={`max-w-[80%] px-4 py-2 rounded-2xl text-sm leading-relaxed ${
                       msg.role === 'user'
-                        ? 'bg-yellow-500 text-black font-medium rounded-br-none'
+                        ? 'bg-cyan-500 text-black font-medium rounded-br-none'
                         : 'bg-white/5 text-slate-300 rounded-bl-none border border-white/10'
                     }`}
                   >
@@ -197,9 +197,9 @@ function Chatbot() {
                   className="flex justify-start"
                 >
                   <div className="bg-white/5 border border-white/10 px-4 py-3 rounded-2xl rounded-bl-none flex gap-1 items-center">
-                    <span className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                    <span className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                    <span className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
                   </div>
                 </motion.div>
               )}
@@ -215,12 +215,12 @@ function Chatbot() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Ask me anything..."
-                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-yellow-500/50 transition-colors duration-200"
+                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-cyan-500/50 transition-colors duration-200"
               />
               <button
                 onClick={sendMessage}
                 disabled={loading || !input.trim()}
-                className="w-10 h-10 bg-yellow-500 hover:bg-yellow-600 disabled:opacity-50 disabled:cursor-not-allowed text-black rounded-xl flex items-center justify-center transition-colors duration-200 font-bold"
+                className="w-10 h-10 bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-black rounded-xl flex items-center justify-center transition-colors duration-200 font-bold"
               >
                 ➤
               </button>

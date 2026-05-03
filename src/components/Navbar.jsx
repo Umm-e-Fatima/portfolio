@@ -5,57 +5,52 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-
+    const handleScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
     <motion.nav
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#0a0a0f]/80 backdrop-blur-md border-b border-yellow-900/30'
-          : 'bg-transparent'
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 w-full z-50 px-8 py-4 flex items-center justify-between transition-all duration-500 ${
+        scrolled ? 'glass border-b border-cyan-500/10' : 'bg-transparent'
       }`}
     >
-
       {/* Logo */}
-      <span className="text-2xl font-bold text-yellow-400">
+      <motion.span
+        whileHover={{ scale: 1.05 }}
+        className="text-2xl font-bold shine-text cursor-pointer"
+      >
         Umm e Fatima
-      </span>
+      </motion.span>
 
       {/* Nav Links */}
-      <ul className="flex gap-8 list-none">
-        <li><a href="#hero" className="text-slate-300 hover:text-yellow-400 transition-colors duration-200">Home</a></li>
-        <li><a href="#about" className="text-slate-300 hover:text-yellow-400 transition-colors duration-200">About</a></li>
-        <li><a href="#skills" className="text-slate-300 hover:text-yellow-400 transition-colors duration-200">Skills</a></li>
-        <li><a href="#projects" className="text-slate-300 hover:text-yellow-400 transition-colors duration-200">Projects</a></li>
-        <li><a href="#contact" className="text-slate-300 hover:text-yellow-400 transition-colors duration-200">Contact</a></li>
+      <ul className="hidden md:flex gap-8 list-none">
+        {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+          <li key={item}>
+            <a
+              href={`#${item.toLowerCase()}`}
+              className="text-slate-400 hover:text-cyan-400 transition-all duration-300 text-sm font-medium relative group"
+            >
+              {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300" />
+            </a>
+          </li>
+        ))}
       </ul>
 
       {/* Chat Button */}
-      <button
-        onClick={() => {
-          document.querySelector('.fixed.bottom-6.right-6').click()
-        }}
-        className="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg transition-colors duration-200 font-bold"
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => document.querySelector('.fixed.bottom-6.right-6').click()}
+        className="glow-pulse bg-cyan-500 hover:bg-cyan-400 text-black px-5 py-2 rounded-full font-bold text-sm transition-all duration-300"
       >
-        Chat with AI
-      </button>
-
+        Chat with AI ✨
+      </motion.button>
     </motion.nav>
   )
 }

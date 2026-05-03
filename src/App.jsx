@@ -1,3 +1,5 @@
+import CursorGlow from './components/CursorGlow'
+import ParticleBackground from './components/ParticleBackground'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -9,16 +11,20 @@ import Chatbot from './components/Chatbot'
 
 function App() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-      <Chatbot />
-    </main>
+    <>
+      <CursorGlow />
+      <ParticleBackground />
+      <main className="relative z-10">
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+        <Chatbot />
+      </main>
+    </>
   )
 }
 
