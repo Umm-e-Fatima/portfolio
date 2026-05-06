@@ -8,8 +8,8 @@ const projects = [
     tags: ['React', 'Tailwind', 'Gemini AI', 'Framer Motion'],
     status: 'Completed',
     statusColor: 'text-green-400 border-green-400',
-    github: 'https://github.com/Umm-e-Fatima',
-    demo: null,
+    github: 'https://github.com/Umm-e-Fatima/portfolio',
+    demo: 'https://lnkd.in/dS5rTppM',
     number: '01',
   },
   {
