@@ -15,8 +15,8 @@ LINKEDIN: https://www.linkedin.com/in/umm-e-fatima/
 SKILLS: React.js, Tailwind CSS, JavaScript, HTML & CSS, Git & GitHub, Prompt Engineering, Gemini AI / OpenAI API, Python
 
 PROJECTS:
-1. AI Portfolio Website (In Progress) - A personal portfolio with a live AI chatbot that answers questions about skills, projects, and availability. Built with React, Tailwind, Framer Motion, and Gemini AI.
-2. Real-Time Job Board Pakistan (Coming Soon) - A job listings aggregator for the Pakistani market with filters for role, city, and salary.
+1. AI Portfolio Website (Completed) - A personal portfolio with a live AI chatbot that answers questions about skills, projects, and availability. Built with React, Tailwind, Framer Motion, and Gemini AI.
+2. CampusConnect(In progress)- A low-bandwidth web platform designed for university students in Pakistan, featuring a Resource Hub, Book Exchange with PIN-based handoff, and an Anonymous Academic Q&A Board. Built as a PWA for accessibility across low-end devices.
 3. SaaS Dashboard UI (Coming Soon) - A fully designed admin dashboard with charts, data tables, dark/light mode toggle, and sidebar navigation.
 
 AVAILABILITY: Currently available for freelance work and open to full time opportunities.
@@ -36,7 +36,7 @@ function Chatbot() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: "Hi! I'm Umm e Fatima's AI assistant. Ask me anything about her skills, projects, or availability! 👋"
+      content: "Hi! I'm Umm e Fatima's AI assistant. Ask me anything about her skills, projects, or availability!"
     }
   ])
   const [input, setInput] = useState('')
@@ -116,7 +116,7 @@ function Chatbot() {
   const clearChat = () => {
     const initial = [{
       role: 'assistant',
-      content: "Hi! I'm Umm e Fatima's AI assistant. Ask me anything about her skills, projects, or availability! 👋"
+      content: "Hi! I'm Umm e Fatima's AI assistant. Ask me anything about her skills, projects, or availability!"
     }]
     setMessages(initial)
     localStorage.removeItem('chatHistory')
